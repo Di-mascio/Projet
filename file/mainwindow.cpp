@@ -209,9 +209,8 @@ void MainWindow::updateRGB(QString command)
     }
 }
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_pushButton_5_clicked()
 {
     MainWindow::updateRGB(QString("r"));
     qDebug() << "r";
 }
-
