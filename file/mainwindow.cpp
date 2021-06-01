@@ -209,8 +209,69 @@ void MainWindow::updateRGB(QString command)
     }
 }
 
+void MainWindow::on_pushButton_61_clicked()
+{
+    MainWindow::updateRGB(QString("1"));
+    qDebug() << "1";
+}
+
+
+void MainWindow::on_pushButton_62_clicked()
+{
+    MainWindow::updateRGB(QString("2"));
+    qDebug() << "10";
+}
+
+
+void MainWindow::on_pushButton_63_clicked()
+{
+    MainWindow::updateRGB(QString("3"));
+    qDebug() << "100";
+}
+
+
+void MainWindow::on_pushButton_64_clicked()
+{
+    MainWindow::updateRGB(QString("4"));
+    qDebug() << "1000";
+}
+
 void MainWindow::on_pushButton_5_clicked()
 {
-    MainWindow::updateRGB(QString("r"));
-    qDebug() << "r";
+    MainWindow::updateRGB(QString("x"));
+    qDebug() << "x";
 }
+
+void MainWindow::on_pushButton_11_clicked()
+{
+    MainWindow::updateRGB(QString("X"));
+    qDebug() << "X";
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    MainWindow::updateRGB(QString("y"));
+    qDebug() << "y";
+}
+
+
+void MainWindow::on_pushButton_12_clicked()
+{
+    MainWindow::updateRGB(QString("Y"));
+    qDebug() << "Y";
+}
+
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    MainWindow::updateRGB(QString("z"));
+    qDebug() << "z";
+}
+
+
+void MainWindow::on_pushButton_13_clicked()
+{
+    MainWindow::updateRGB(QString("Z"));
+    qDebug() << "Z";
+}
+

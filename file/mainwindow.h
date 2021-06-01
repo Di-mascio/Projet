@@ -49,6 +49,24 @@ private slots:
     void updateRGB(QString);
     void on_pushButton_5_clicked();
 
+    void on_pushButton_61_clicked();
+
+    void on_pushButton_62_clicked();
+
+    void on_pushButton_63_clicked();
+
+    void on_pushButton_64_clicked();
+
+    void on_pushButton_11_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_13_clicked();
+
 private:
 
     Ui::MainWindow *ui;

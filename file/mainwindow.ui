@@ -984,24 +984,6 @@ background: rgb(111, 111, 111);
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#901c3a;&quot;&gt;Calibrage&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>368</x>
-        <y>304</y>
-        <width>171</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>80</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="page_configreseau">
      <widget class="QPushButton" name="pushButton_9">
