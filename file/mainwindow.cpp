@@ -211,6 +211,7 @@ void MainWindow::updateRGB(QString command)
 
 void MainWindow::on_pushButton_61_clicked()
 {
+    //Increment a 1
     MainWindow::updateRGB(QString("1"));
     qDebug() << "1";
 }
@@ -218,6 +219,7 @@ void MainWindow::on_pushButton_61_clicked()
 
 void MainWindow::on_pushButton_62_clicked()
 {
+    //Increment a 10
     MainWindow::updateRGB(QString("2"));
     qDebug() << "10";
 }
@@ -225,6 +227,7 @@ void MainWindow::on_pushButton_62_clicked()
 
 void MainWindow::on_pushButton_63_clicked()
 {
+    //Increment a 100
     MainWindow::updateRGB(QString("3"));
     qDebug() << "100";
 }
@@ -232,46 +235,82 @@ void MainWindow::on_pushButton_63_clicked()
 
 void MainWindow::on_pushButton_64_clicked()
 {
+    //Increment a 1000
     MainWindow::updateRGB(QString("4"));
     qDebug() << "1000";
 }
 
 void MainWindow::on_pushButton_5_clicked()
 {
+    //X+
     MainWindow::updateRGB(QString("x"));
     qDebug() << "x";
 }
 
 void MainWindow::on_pushButton_11_clicked()
 {
+    //X-
     MainWindow::updateRGB(QString("X"));
     qDebug() << "X";
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
+    //Y+
     MainWindow::updateRGB(QString("y"));
     qDebug() << "y";
 }
 
-
 void MainWindow::on_pushButton_12_clicked()
 {
+    //Y-
     MainWindow::updateRGB(QString("Y"));
     qDebug() << "Y";
 }
 
-
 void MainWindow::on_pushButton_7_clicked()
 {
+    //Z+
     MainWindow::updateRGB(QString("z"));
     qDebug() << "z";
 }
 
-
 void MainWindow::on_pushButton_13_clicked()
 {
+    //Z+
     MainWindow::updateRGB(QString("Z"));
     qDebug() << "Z";
+}
+
+
+void MainWindow::on_pushButton_10_clicked()
+{
+    //tare a vide
+    MainWindow::updateRGB(QString("0"));
+    qDebug() << "0";
+}
+
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    //tare connue
+    MainWindow::updateRGB(QString("c"));
+    qDebug() << "c";
+}
+
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    //tare plateau ~
+    MainWindow::updateRGB(QString("v"));
+    qDebug() << "v";
+}
+
+
+void MainWindow::on_pushButton_68_clicked()
+{
+    //Stop mesures
+    MainWindow::updateRGB(QString("S"));
+    qDebug() << "S";
 }
 
