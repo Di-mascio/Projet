@@ -90,7 +90,7 @@ background: rgb(173, 60, 60);
 }</string>
       </property>
       <property name="text">
-       <string>mesures
+       <string>Mesures
 cdg</string>
       </property>
       <property name="autoExclusive">
@@ -134,7 +134,7 @@ background: rgb(124, 42, 42);
 }</string>
       </property>
       <property name="text">
-       <string>cdg 
+       <string>Cdg 
 plateau</string>
       </property>
       <property name="autoExclusive">
@@ -178,7 +178,7 @@ background: rgb(78, 29, 37);
 }</string>
       </property>
       <property name="text">
-       <string>pèse 
+       <string>Pèse 
 pièce</string>
       </property>
       <property name="autoExclusive">
@@ -397,6 +397,30 @@ border-radius : 15px;</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:48pt; color:#ffffff;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>320</y>
+        <width>101</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #ffffff;
+border: 2px solid #555;
+border-radius: 20px;
+border-style: outset;
+background: rgb(179, 61, 61);
+padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Demandes 
+mesures</string>
       </property>
      </widget>
     </widget>
@@ -1374,6 +1398,18 @@ auto</string>
       </property>
       <property name="text">
        <string>File create</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>421</width>
+        <height>341</height>
+       </rect>
       </property>
      </widget>
     </widget>

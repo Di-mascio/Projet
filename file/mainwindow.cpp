@@ -12,6 +12,7 @@
 #include <QFile>
 #include <QDebug>
 #include <QtWidgets>
+#include <QTextStream>
 
 using namespace std;
 
@@ -48,6 +49,31 @@ MainWindow::MainWindow(QWidget *parent)
     }else{
         // give error message if not available
         QMessageBox::warning(this, "Port error", "Couldn't find the Arduino!");
+    }
+    csvModel = new QStandardItemModel(this);
+    csvModel->setColumnCount(3);
+    ui->tableView->setModel(csvModel);
+
+
+    QFile file("/home/maxime/Téléchargements/build-activite-fichier-csv-Desktop_Qt_5_15_2_GCC_64bit-Debug/bin/data.csv");
+    if ( !file.open(QFile::ReadOnly | QFile::Text) ) {
+        qDebug() << "File not exists";
+    } else {
+
+        QTextStream in(&file);
+
+        while (!in.atEnd())
+        {
+            QString line = in.readLine();
+
+            QList<QStandardItem *> standardItemsList;
+            for (QString item : line.split(";"))
+            {
+                standardItemsList.append(new QStandardItem(item));
+            }
+            csvModel->insertRow(csvModel->rowCount(), standardItemsList);
+        }
+        file.close();
     }
 }
 
@@ -92,6 +118,11 @@ void MainWindow::on_actionMesures_triggered()
 void MainWindow::on_actionConfiguration_R_seau_triggered()
 {
     ui->stackedWidget->setCurrentIndex(3);
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 void MainWindow::graphic_window()
@@ -313,4 +344,7 @@ void MainWindow::on_pushButton_68_clicked()
     MainWindow::updateRGB(QString("S"));
     qDebug() << "S";
 }
+
+
+
 

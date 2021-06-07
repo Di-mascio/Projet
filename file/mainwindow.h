@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <string.h>
 #include <QSerialPort>
+#include <QStandardItemModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -75,6 +76,8 @@ private slots:
 
     void on_pushButton_68_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
 
     Ui::MainWindow *ui;
@@ -83,5 +86,6 @@ private:
     static const quint16 arduino_uno_product_id = 67;
     QString arduino_port_name;
     bool arduino_is_available;
+    QStandardItemModel *csvModel;
 };
 #endif // MAINWINDOW_H
