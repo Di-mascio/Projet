@@ -13,6 +13,10 @@
 #include <QDebug>
 #include <QtWidgets>
 #include <QTextStream>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -55,7 +59,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableView->setModel(csvModel);
 
 
-    QFile file("/home/maxime/Téléchargements/build-activite-fichier-csv-Desktop_Qt_5_15_2_GCC_64bit-Debug/bin/data.csv");
+    QFile file("/home/maxime/Documents/Projet/SERVER/demande.csv");
     if ( !file.open(QFile::ReadOnly | QFile::Text) ) {
         qDebug() << "File not exists";
     } else {
@@ -67,13 +71,14 @@ MainWindow::MainWindow(QWidget *parent)
             QString line = in.readLine();
 
             QList<QStandardItem *> standardItemsList;
-            for (QString item : line.split(";"))
+            for (QString item : line.split(","))
             {
                 standardItemsList.append(new QStandardItem(item));
             }
             csvModel->insertRow(csvModel->rowCount(), standardItemsList);
         }
         file.close();
+
     }
 }
 
@@ -345,6 +350,58 @@ void MainWindow::on_pushButton_68_clicked()
     qDebug() << "S";
 }
 
+void MainWindow::delete_record()
+{
 
+    // Open FIle pointers
+    fstream fin, fout;
+
+    // Open the existing file
+    fin.open("/home/maxime/Téléchargements/build-activite-fichier-csv-Desktop_Qt_5_15_2_GCC_64bit-Debug/bin/data.csv", ios::in);
+
+    // Create a new file to store the non-deleted data
+    //fout.open("/home/maxime/Téléchargements/build-activite-fichier-csv-Desktop_Qt_5_15_2_GCC_64bit-Debug/bin/data.csv", ios::out);
+
+    int rollnum, roll1, marks, count = 0, i;
+    char sub;
+    int index, new_marks;
+    string line, word;
+    vector<string> row;
+
+    // Get the roll number
+    // to decide the data to be deleted
+    cout << "Enter the roll number "
+         << "of the record to be deleted: ";
+    cin >> rollnum;
+    roll1 = 0;
+
+    string data;
+    while (std::getline(fin, line))
+    {
+        roll1++;
+        if( roll1 != rollnum){
+            data = data + line + '\n';
+
+        }
+
+    }
+
+
+
+    // Close the pointers
+    fin.close();
+
+
+    // removing the existing file
+    //remove("/home/maxime/Téléchargements/build-activite-fichier-csv-Desktop_Qt_5_15_2_GCC_64bit-Debug/bin/data.csv");
+
+    // renaming the new file with the existing file name
+   //rename("/home/maxime/Téléchargements/build-activite-fichier-csv-Desktop_Qt_5_15_2_GCC_64bit-Debug/bin/dataaaaa.csv", "/home/maxime/Téléchargements/build-activite-fichier-csv-Desktop_Qt_5_15_2_GCC_64bit-Debug/bin/data.csv");
+
+    fout.open("/home/maxime/Téléchargements/build-activite-fichier-csv-Desktop_Qt_5_15_2_GCC_64bit-Debug/bin/data.csv", ios::out);
+    fout.write( data.c_str() , data.length() );
+    fout.close();
+            qDebug() << data.c_str();
+}
 
 

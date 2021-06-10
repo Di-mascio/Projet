@@ -30,7 +30,7 @@ public:
     void graphic_window();
     void fonction_mesures();
     void ip();
-
+    void delete_record();
 private slots:
     //void on_pushButton_clicked(); //pour transfère de data entre différentes windows
 
@@ -48,6 +48,7 @@ private slots:
     void on_pushButton_2_clicked();
 
     void updateRGB(QString);
+
     void on_pushButton_5_clicked();
 
     void on_pushButton_61_clicked();
